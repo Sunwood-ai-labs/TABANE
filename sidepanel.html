@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TABANE</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kaisei+Decol:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="sidepanel.css">
+</head>
+
+<body>
+  <div class="container">
+    <!-- ヘッダー -->
+    <header class="header">
+      <div class="logo"><i class="fa-solid fa-robot"></i> TABANE</div>
+      <div class="actions">
+        <button id="expandBtn" class="icon-btn" title="全画面表示"><i class="fa-solid fa-expand"></i></button>
+        <button id="refreshBtn" class="icon-btn" title="更新"><i class="fa-solid fa-rotate"></i></button>
+      </div>
+    </header>
+
+    <!-- 検索バー -->
+    <div class="search-bar">
+      <input type="text" id="searchInput" placeholder="チャットを検索..." />
+    </div>
+
+    <!-- サービスカード -->
+    <div class="services-grid">
+      <!-- ChatGPT -->
+      <div class="service-card chatgpt" data-service="chatgpt">
+        <div class="card-header">
+          <span class="service-icon"><i class="fa-solid fa-message"></i></span>
+          <span class="service-name">ChatGPT</span>
+          <span class="chat-count" id="chatgpt-count">0</span>
+        </div>
+        <div class="chat-list" id="chatgpt-list">
+          <div class="loading">読み込み中...</div>
+        </div>
+      </div>
+
+      <!-- Gemini -->
+      <div class="service-card gemini" data-service="gemini">
+        <div class="card-header">
+          <span class="service-icon"><i class="fa-solid fa-star"></i></span>
+          <span class="service-name">Gemini</span>
+          <span class="chat-count" id="gemini-count">0</span>
+        </div>
+        <div class="chat-list" id="gemini-list">
+          <div class="loading">読み込み中...</div>
+        </div>
+      </div>
+
+      <!-- Claude -->
+      <div class="service-card claude" data-service="claude">
+        <div class="card-header">
+          <span class="service-icon"><i class="fa-solid fa-brain"></i></span>
+          <span class="service-name">Claude</span>
+          <span class="chat-count" id="claude-count">0</span>
+        </div>
+        <div class="chat-list" id="claude-list">
+          <div class="loading">読み込み中...</div>
+        </div>
+      </div>
+
+      <!-- Colab -->
+      <div class="service-card colab" data-service="colab">
+        <div class="card-header">
+          <span class="service-icon"><i class="fa-solid fa-code"></i></span>
+          <span class="service-name">Colab</span>
+          <span class="chat-count" id="colab-count">0</span>
+        </div>
+        <div class="chat-list" id="colab-list">
+          <div class="loading">読み込み中...</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- フッター -->
+    <footer class="footer">
+      <p>各サービスのページを開いて履歴を取得</p>
+    </footer>
+  </div>
+
+  <script src="sidepanel.js"></script>
+</body>
+
+</html>
